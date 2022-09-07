@@ -3,7 +3,7 @@
           <div class="row">
             <div class="col-sm-12 col-md-6">
               <h6>Sobre</h6>
-              <a href="admin/index.php">Área Administrativa
+              <a href="../index.php">Área Administrativa
           <hr>
         </div>
             <div class="col-md-4 col-sm-6 col-xs-12">

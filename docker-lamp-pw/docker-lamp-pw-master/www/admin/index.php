@@ -1,26 +1,39 @@
 <?php
-
-
+    session_start();
 
     if(!isset($_GET['controller'])){
-        require_once('controllers/SiteController.php');
-        $SiteController = new SiteController();
-        $SiteController -> home();
-    }
-    else{
+        require_once('controllers/MainController.php');
+        $MainController = new MainController();
+        $MainController -> index();
+    }else{
         switch ($_REQUEST['controller']) {
-            case 'site':
-                require_once('controllers/SiteController.php');
-                $SiteController = new SiteController();
+            case 'main':
+                require_once('controllers/MainController.php');
+                $MainController = new MainController();
                 if (!isset($_GET['action'])) {
-                    $SiteController -> home();
+                    $MainController -> index();
                 }else {
                     switch ($_REQUEST['action']) {
-                        case 'home':
-                            $SiteController ->home();
+                        case 'login':
+                            $MainController -> login();
+                        break;
+                        case 'logout':
+                            $MainController -> logout();
+                        break;
+                    }
                 }
             break;
+            case 'user':
+                require_once ('controllers/UserController.php');
+                $UserController = new UserController();
+                if(!isset($_GET['action'])){
+
+                }else{
+                    switch ($_REQUEST['action']){
+                    case 'validateLogin':
+                        $UserController -> validateLogin();
+                    }
                 }
+            break;
         }
     }
-?>

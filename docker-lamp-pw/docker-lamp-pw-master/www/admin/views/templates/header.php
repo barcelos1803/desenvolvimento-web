@@ -14,36 +14,19 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 </head>
 <body>
-    <header>
-        <nav id="nav" class="navbar navbar-expand-sm navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a id="logo" class="navbar-brand" href="?controler=site&action=home">Mvendas</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="mynavbar">
-                <ul class="navbar-nav me-auto">
-                  <li class="nav-item">
-                    <a id="home"class="nav-link" href="?controller=site&action=home">Home</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a id="produtos" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Produtos</a>
-                    <ul class="dropdown-menu">
-                      <li><a id="dropMasculino" class="dropdown-item" href="?controller=site&action=masculino">Masculino</a></li>
-                      <li><a id="dropFeminino" class="dropdown-item" href="?controller=site&action=feminino">Feminino</a></li>
-                      <li><a id="dropInfantil" class="dropdown-item" href="?controller=site&action=infantil">Infantil</a></li>
-                    </ul>
-                  <li class="nav-item">
-                    <a id="sobreNos"class="nav-link" href="?controller=site&action=sobreNos">Sobre Nós</a>
-                  </li>
-                  <li class="nav-item">
-                    <a id="registro"class="nav-link" href="?controller=client&action=register">Registro</a>
-                  </li>
-                  <li class="nav-item">
-                    <a id="registro"class="nav-link" href="?controller=client&action=listClients">Listagem De Clientes</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </header>
+    <header class="p-3 text-center">
+      <h1>Área administrativa</h1>
+      <a href="?controller=main&action=logout">Sair</a>
+    </header>
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="p-3 col-md-3">
+          <h2>Menu</h2>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="?controller=main&action=index">Home</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>

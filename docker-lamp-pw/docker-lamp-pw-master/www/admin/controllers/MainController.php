@@ -4,9 +4,9 @@ class MainController {
 
     public function index(){
         if(isset($_SESSION['user'])){
-            require_once('views/templates/header');
-            require_once('views/templates/home');
-            require_once('views/templates/footer');
+            require_once('views/templates/header.php');
+            require_once('views/templates/home.php');
+            require_once('views/templates/footer.php');
         }else{
         header('Location:?controller=main&action=login');
         }

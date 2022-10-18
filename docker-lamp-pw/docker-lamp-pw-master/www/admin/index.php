@@ -30,8 +30,41 @@
 
                 }else{
                     switch ($_REQUEST['action']){
-                    case 'validateLogin':
-                        $UserController -> validateLogin();
+                        case 'validateLogin':
+                            $UserController -> validateLogin();
+                        break;
+                    }
+                }
+            break;
+
+            case 'client':
+                require_once ('controllers/ClientController.php');
+                $ClientController = new ClientController;
+                if(!isset($_GET['action'])){
+
+                }else{
+                    switch ($_REQUEST['action']){
+                        case 'listClients':
+                            $ClientController -> listClients();
+                        break;
+                        case 'detailsClient':
+                            $ClientController -> detailsClient($_GET['id']);
+                        break;
+                        case 'insertClient':
+                            $ClientController -> insertClient();
+                        break;
+                        case 'insertClientAction':
+                            $ClientController -> insertClientAction();
+                        break;
+                        case 'updateClient':
+                            $ClientController -> updateClient($_GET['id']);
+                        break;
+                        case 'updateClientAction':
+                            $ClientController -> updateClientAction($_GET['id']);
+                        break;
+                        case 'deleteClient':
+                            $ClientController -> deleteClient($_GET['id']);
+                        break;
                     }
                 }
             break;
